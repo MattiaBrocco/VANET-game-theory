@@ -1,0 +1,54 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+\begin{axis}[
+legend cell align={left},
+legend style={
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0.03,0.97)},
+  anchor=north west,
+  draw=lightgray204
+},
+tick align=outside,
+tick pos=left,
+x grid style={darkgray176},
+xlabel={Speed \(\displaystyle (v_{1})\)},
+xmajorgrids,
+xmin=33, xmax=187,
+xtick style={color=black},
+y grid style={darkgray176},
+ylabel={Payoff},
+ymajorgrids,
+ymin=-0.676837806410256, ymax=1.24938880641026,
+ytick style={color=black}
+]
+\addplot [semithick, steelblue31119180, mark=x, mark size=3.5, mark options={solid}]
+table {%
+40 0.487641025641026
+70 0.256871794871795
+100 0.0261025641025641
+130 -0.204666666666667
+160 -0.435435897435898
+180 -0.589282051282051
+};
+\addlegendentry{Attacker}
+\addplot [semithick, darkorange25512714, dashed, mark=*, mark size=3, mark options={solid}]
+table {%
+40 0.0849099743589745
+70 0.315679205128205
+100 0.546448435897436
+130 0.777217666666667
+160 1.0079868974359
+180 1.16183305128205
+};
+\addlegendentry{Defender}
+\end{axis}
+
+\end{tikzpicture}
